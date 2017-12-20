@@ -1,0 +1,19 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Welcome to my website</title>
+    {% endif %}
+  </head>
+  <body>
+    <h1>Welcome!</h1>
+    	{% for user in users %}
+       	<div>
+       		<p>
+       		{{ user.name }} likes <b>{{ user.food }}</b>
+       		</p>
+       	</div>
+		{% endfor %}
+  </body>
+</html>
